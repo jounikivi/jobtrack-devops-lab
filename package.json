@@ -2,6 +2,7 @@
   "name": "jobtrack-devops-lab",
   "private": true,
   "version": "0.0.0",
+  "type": "module",
   "description": "JobTrack Lite on työnhaun seurantasovellus, johon käyttäjä voi kirjata työpaikkahakemuksia ja seurata niiden etenemistä.",
   "scripts": {
     
