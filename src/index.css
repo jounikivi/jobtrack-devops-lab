@@ -1,0 +1,32 @@
+:root {
+  /* Shared design tokens keep the visual system consistent. */
+  --color-background: #161616;
+  --color-surface: #f7f3e8;
+  --color-text: #f5f1e8;
+  --color-accent: #c79a3b;
+
+  font-family:
+    Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--color-background);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
