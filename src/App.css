@@ -1,0 +1,14 @@
+.app-header,
+.app-main {
+  width: min(100% - 2rem, 72rem);
+  margin-inline: auto;
+}
+
+.app-header {
+  padding: 3rem 0 1.5rem;
+  border-bottom: 1px solid var(--color-accent);
+}
+
+.app-main {
+  padding: 2rem 0;
+}
