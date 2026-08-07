@@ -1,4 +1,5 @@
 import AppHeader from './components/AppHeader'
+import EmptyState from './components/EmptyState'
 import './App.css'
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
     <>
       <AppHeader />
       <main className="app-main">
-        <p>Ei vielä tallennettuja hakemuksia.</p>
+        <EmptyState />
       </main>
     </>
   )
