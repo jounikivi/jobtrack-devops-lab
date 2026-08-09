@@ -18,3 +18,12 @@ export function addJobApplication(
 ): JobApplication[] {
   return [...applications, createJobApplication(application)]
 }
+
+export function deleteJobApplication(
+  applications: JobApplication[],
+  applicationId: string,
+): JobApplication[] {
+  return applications.filter(
+    (application) => application.id !== applicationId,
+  )
+}
