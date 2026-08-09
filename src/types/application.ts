@@ -6,6 +6,8 @@ export type ApplicationStatus =
   | 'rejected'
   | 'closed'
 
+export type ApplicationStatusFilter = ApplicationStatus | 'all'
+
 export interface JobApplication {
   id: string
   company: string
