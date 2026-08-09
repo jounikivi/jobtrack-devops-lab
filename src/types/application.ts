@@ -14,3 +14,5 @@ export interface JobApplication {
   status: ApplicationStatus
   notes: string
 }
+
+export type NewJobApplication = Omit<JobApplication, 'id'>
