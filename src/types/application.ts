@@ -18,3 +18,8 @@ export interface JobApplication {
 }
 
 export type NewJobApplication = Omit<JobApplication, 'id'>
+
+export interface ApplicationSummary {
+  total: number
+  byStatus: Record<ApplicationStatus, number>
+}
