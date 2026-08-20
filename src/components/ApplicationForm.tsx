@@ -1,13 +1,42 @@
+import type { FormEvent } from 'react'
 import { APPLICATION_STATUS_LABELS } from '../constants/applicationStatus'
+import type {
+  ApplicationStatus,
+  NewJobApplication,
+} from '../types/application'
 
-function ApplicationForm() {
+interface ApplicationFormProps {
+  onAddApplication: (application: NewJobApplication) => void
+}
+
+function ApplicationForm({
+  onAddApplication,
+}: ApplicationFormProps) {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+
+    const form = event.currentTarget
+    const formData = new FormData(form)
+
+    const application: NewJobApplication = {
+      company: String(formData.get('company')).trim(),
+      position: String(formData.get('position')).trim(),
+      applicationDate: String(formData.get('applicationDate')),
+      status: String(formData.get('status')) as ApplicationStatus,
+      notes: String(formData.get('notes')).trim(),
+    }
+
+    onAddApplication(application)
+    form.reset()
+  }
+
   return (
     <section
       className="application-form-card"
       aria-labelledby="application-form-card-title"
     >
       <h2 id="application-form-card-title">Lisää hakemus</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="form-field">
           <label htmlFor="company">Työnantaja</label>
           <input
