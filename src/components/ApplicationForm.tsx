@@ -53,6 +53,22 @@ function ApplicationForm() {
             )}
           </select>
         </div>
+        <div className="form-field">
+          <label htmlFor="notes">Muistiinpanot</label>
+          <textarea
+            id="notes"
+            name="notes"
+            rows={4}
+          />
+        </div>
+        <div className="form-actions">
+          <button
+            className="primary-button"
+            type="submit"
+          >
+            Lisää hakemus
+          </button>
+        </div>
       </form>
     </section>
   )
