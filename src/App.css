@@ -10,7 +10,85 @@
 }
 
 .app-main {
+  display: grid;
+  gap: 2rem;
   padding: 2rem 0;
+}
+
+.application-form-card {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--color-surface-text);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-accent);
+  border-radius: 0.75rem;
+  box-shadow: 0 1rem 2.5rem rgb(0 0 0 / 20%);
+}
+
+.application-form-card h2 {
+  margin: 0 0 1.5rem;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+}
+
+.application-form-card form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.form-field label {
+  font-weight: 600;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 0.75rem 0.875rem;
+  color: var(--color-surface-text);
+  background-color: #fffdf8;
+  border: 1px solid #8d826e;
+  border-radius: 0.5rem;
+}
+
+.form-field input:focus-visible,
+.form-field select:focus-visible,
+.form-field textarea:focus-visible {
+  border-color: var(--color-accent);
+  outline: 3px solid rgb(199 154 59 / 35%);
+  outline-offset: 2px;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.primary-button {
+  padding: 0.75rem 1.25rem;
+  color: var(--color-background);
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  border-radius: 0.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.primary-button:hover {
+  background-color: #b88b32;
+}
+
+.primary-button:focus-visible {
+  outline: 3px solid rgb(199 154 59 / 35%);
+  outline-offset: 3px;
 }
 
 .empty-state {
